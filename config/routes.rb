@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   scope module: :web do
     root 'welcome#index'
+    namespace :admin do
+      resources :text_blocks
+    end
   end
 
   # Example of regular route:

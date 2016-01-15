@@ -1,0 +1,10 @@
+.slide.slide_1
+  .stock_block
+    .fotorama
+      = image_tag 'fotorama/slider175_1.jpg'
+      = image_tag 'fotorama/slider175_2.jpg'
+      = image_tag 'fotorama/slider175_3.jpg'
+      = image_tag 'fotorama/slider175_4.jpg'
+    -if (@text_blocks && @text_blocks[0] && @text_blocks[0].visible)
+      .stock
+        = @text_blocks[0].text

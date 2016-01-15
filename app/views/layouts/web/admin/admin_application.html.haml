@@ -1,0 +1,17 @@
+!!!
+%html{:lang => "ru"}
+  %head
+    %title
+      Администрационная панель
+
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    = stylesheet_link_tag 'admin_application', media: 'all'
+    = javascript_include_tag "vendor/modernizr"
+
+  %body
+    = yield
+
+    = javascript_include_tag "admin_application"

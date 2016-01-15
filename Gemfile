@@ -30,8 +30,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-fotorama'
 end
 
-gem 'refinerycms'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

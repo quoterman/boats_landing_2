@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Text:
+  = @text_block.text
+%p
+  %b Visible:
+  = @text_block.visible
+
+= link_to 'Edit', edit_admin_text_block_path(@text_block)
+\|
+= link_to 'Back', admin_text_blocks_path

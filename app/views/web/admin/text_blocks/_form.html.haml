@@ -1,0 +1,16 @@
+= form_for [:admin, @text_block] do |f|
+  - if @text_block.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@text_block.errors.count, "error")} prohibited this text_block from being saved:"
+      %ul
+        - @text_block.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :text
+    = f.text_field :text
+  .field
+    = f.label :visible
+    = f.check_box :visible
+  .actions
+    = f.submit 'Save'

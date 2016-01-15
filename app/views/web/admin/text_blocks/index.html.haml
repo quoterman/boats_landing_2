@@ -1,0 +1,25 @@
+-# = render "partials/admin/actions_tabs"
+
+%h1 Listing text_blocks
+
+%table
+  %thead
+    %tr
+      %th Text
+      %th Visible
+      %th
+      %th
+      %th
+
+  %tbody
+    - @text_blocks.each do |text_block|
+      %tr
+        %td= text_block.text
+        %td= text_block.visible
+        %td= link_to 'Show', admin_text_block_path(text_block)
+        %td= link_to 'Edit', edit_admin_text_block_path(text_block)
+        %td= link_to 'Destroy', admin_text_block_path(text_block), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Text block', new_admin_text_block_path

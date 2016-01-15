@@ -1,0 +1,18 @@
+%ul.tabs{"data-tab" => ""}
+  %li.tab-title.active
+    %a{:href => "#panel1"} Добавить акционное предложение
+  %li.tab-title
+    %a{:href => "#panel2"} Установить цену
+.tabs-content
+  #panel1.content.active
+    = form_for [:admin, @text_block] do |f|
+      .field
+        = f.label :text
+        = f.text_field :text
+      .field
+        = f.label :visible
+        = f.check_box :visible
+      .actions
+        = f.submit 'Save'
+  #panel2.content
+    %p This is the second panel of the basic tab example. This is the second panel of the basic tab example.

@@ -125,7 +125,6 @@ GEM
     rake (10.4.2)
     rdoc (4.2.1)
       json (~> 1.4)
-    refinerycms (0.9.7.15)
     ruby_parser (3.7.2)
       sexp_processor (~> 4.1)
     sass (3.4.20)
@@ -177,7 +176,6 @@ DEPENDENCIES
   rails (= 4.2.1)
   rails-assets-fotorama!
   rails-assets-onepage-scroll!
-  refinerycms
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
