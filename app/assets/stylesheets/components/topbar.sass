@@ -1,110 +1,36 @@
+$topbar-link-text-decoration-hover: underline
+$topbar-link-line-height: 1.8
+$topbar-link-padding-tb: ($topbar-height - ($topbar-link-line-height * $topbar-link-font-size)) / 2
+
+.contain-to-grid
+  
+  &.topbar-scroll
+    background:
+      color: black
+
+
 .top-bar-section 
   ul 
-    li 
-      > a
-        text-decoration: $topbar-link-text-decoration
+    li
+      &:not(.has-form)
+        a
+          &:not(.button)
+            text-decoration: $topbar-link-text-decoration
+            padding-top: $topbar-link-padding-tb
+            padding-bottom: $topbar-link-padding-tb
+            line-height: $topbar-link-line-height
+            
+            &:after
+              content: ""
+              display: block
+              margin-left: auto
+              margin-right: auto
+              width: 0
+              height: 1px
+              background-color: #FFFFFF
+              // -webkit-transition: all 0.3s ease-in-out
+              // transition: all 0.3s ease-in-out
 
-
-
-// .menu
-//   line-height: 1
-//   margin: 0 auto 3em
-
-// .menu__list
-//   position: relative
-//   display: -webkit-flex
-//   display: flex
-//   -webkit-flex-wrap: wrap
-//   flex-wrap: wrap
-//   margin: 0
-//   padding: 0
-//   list-style: none
-
-// .menu__item
-//   display: block
-//   margin: 1em 0
-
-// .menu__link
-//   font-size: 1.05em
-//   font-weight: bold
-//   display: block
-//   padding: 1em
-//   cursor: pointer
-//   -webkit-user-select: none
-//   -moz-user-select: none
-//   -ms-user-select: none
-//   user-select: none
-//   -webkit-touch-callout: none
-//   -khtml-user-select: none
-//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-//   &:hover, &:focus
-//     outline: none
-
-// .menu--alonso
-//   .menu__item
-//     margin: 0
-//   .menu__link
-//     width: 120px
-//     height: 3em
-//     text-align: center
-//     color: #b5b5b5
-//     -webkit-transition: color 0.3s
-//     transition: color 0.3s
-//     &:hover, &:focus
-//       color: #929292
-//   .menu__item--current .menu__link
-//     color: #d94f5c
-//     -webkit-transition: color 0.5s
-//     transition: color 0.5s
-//   .menu__line
-//     position: absolute
-//     top: 100%
-//     left: 0
-//     width: 120px
-//     height: 2px
-//     pointer-events: none
-//     border: 1px solid #fff
-//     border-width: 0 45px
-//     background: #d94f5c
-//     -webkit-transition: -webkit-transform 0.5s
-//     transition: transform 0.5s
-//     -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1)
-//     -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22)
-//     transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22)
-//   .menu__item
-//     &:nth-child(1).menu__item--current ~ .menu__line
-//       -webkit-transform: translate3d(0, 0, 0)
-//       transform: translate3d(0, 0, 0)
-//     &:nth-child(2).menu__item--current ~ .menu__line
-//       -webkit-transform: translate3d(100%, 0, 0)
-//       transform: translate3d(100%, 0, 0)
-//     &:nth-child(3).menu__item--current ~ .menu__line
-//       -webkit-transform: translate3d(200%, 0, 0)
-//       transform: translate3d(200%, 0, 0)
-//     &:nth-child(4).menu__item--current ~ .menu__line
-//       -webkit-transform: translate3d(300%, 0, 0)
-//       transform: translate3d(300%, 0, 0)
-//     &:nth-child(5).menu__item--current ~ .menu__line
-//       -webkit-transform: translate3d(400%, 0, 0)
-//       transform: translate3d(400%, 0, 0)
-
-// @media screen and (max-width: 55em)
-//   .menu--alonso
-//     .menu__line
-//       top: 3em
-//     .menu__item
-//       &:nth-child(1).menu__item--current ~ .menu__line
-//         -webkit-transform: translate3d(0, 0, 0)
-//         transform: translate3d(0, 0, 0)
-//       &:nth-child(2).menu__item--current ~ .menu__line
-//         -webkit-transform: translate3d(0, 3em, 0)
-//         transform: translate3d(0, 3em, 0)
-//       &:nth-child(3).menu__item--current ~ .menu__line
-//         -webkit-transform: translate3d(0, 6em, 0)
-//         transform: translate3d(0, 6em, 0)
-//       &:nth-child(4).menu__item--current ~ .menu__line
-//         -webkit-transform: translate3d(0, 9em, 0)
-//         transform: translate3d(0, 9em, 0)
-//       &:nth-child(5).menu__item--current ~ .menu__line
-//         -webkit-transform: translate3d(0, 12em, 0)
-//         transform: translate3d(0, 12em, 0)
+            &:hover
+              &:after
+                width: 100%

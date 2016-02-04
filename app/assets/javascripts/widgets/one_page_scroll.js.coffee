@@ -12,16 +12,16 @@ class @Widgets.OnePageScroll
     @$container.onepage_scroll @_options(options)
 
   renderPage: (index) =>
-    # if index > 1
-    #   $(".paralax-bg").addClass("show")
-    #   $(".contain-to-grid").addClass("shrink")
-    #   # $(".f-topbar-fixed").css(
-    #     # "padding-top", "48px")
-    # else
-    #   $(".paralax-bg").removeClass("show")
-    #   $(".contain-to-grid").removeClass("shrink")
-    #   # $(".f-topbar-fixed").css(
-    #   #   "padding-top", "80px")
+    if index > 1
+      $(".contain-to-grid").addClass("topbar-scroll")
+    else
+      $(".contain-to-grid").removeClass("topbar-scroll")
+
+    if index % 2 == 0
+      console.log "123"
+      $('.onepage-pagination').addClass('navigation-scroll')
+    else
+      $('.onepage-pagination').removeClass('navigation-scroll')
 
   _options: (options) =>
 

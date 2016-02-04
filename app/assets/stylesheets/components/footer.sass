@@ -1,0 +1,42 @@
+.footer
+  position: relative
+  background: 
+    color: $black
+  color: $white
+  padding: rem-calc(32) 0
+  margin: 
+    top: - $footer-height
+
+  &:before
+    content: ''
+    display: block
+    border: $footer-triangle-size solid transparent
+      bottom: $footer-triangle-size solid $black
+    position: absolute
+    top: - $footer-triangle-size * 2
+    left: 50%
+    transform: translateX(-50%)
+
+
+
+
+
+.footer__logo
+  font:
+    size: rem-calc(16)
+    family: $font-family-sans-serif-semibold
+  img,
+  span
+    display: block
+
+  img
+    margin: 
+      bottom: rem-calc(16)
+
+.footer__contacts
+  font:
+    size: rem-calc(16)
+
+.contacts__email
+  margin: 
+    bottom: rem-calc(16)

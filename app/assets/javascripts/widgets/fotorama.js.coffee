@@ -11,6 +11,10 @@ class @Widgets.Fotorama
       autoplay: true
       autoplay: 6000
       transition: 'crossfade'
-      # width: '100%'
-      heigth: '100%'
-      ratio: '16/9'
+      minwidth: '1440'
+      minheigth: '900'
+      width: '100%'
+      height: '100%'
+      fit: "cover"
+      nav: false
+      arrows: false

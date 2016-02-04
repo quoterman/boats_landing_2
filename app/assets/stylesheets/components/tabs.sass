@@ -1,0 +1,61 @@
+// Variables
+$tabs-color: white
+
+.tabs
+  &.vertical
+    padding: 0
+    float: none
+    max-width: 100%
+    width: 100%
+    
+    .tab-title
+      border:
+        bottom: 1px solid $tabs-color
+      &:last-child
+        border:
+          bottom: none
+      > a
+        // font-size: 16px
+        line-height: 1
+        padding: 14.5px 0 
+        text-decoration: none
+        position: relative
+        &:hover,
+        &:focus
+          outline: none
+        &:hover
+          &:after
+            content: ""
+            width: 0
+            position: absolute
+            top: 50%
+            right: 0
+            height: 0
+            transform: translateY(-50%)
+            border-top: 8px solid transparent
+            border-bottom: 8px solid transparent
+            border-left: 6px solid $tabs-color
+
+      &.active
+        > a
+          &:after
+            content: ""
+            width: 0
+            position: absolute
+            top: 50%
+            right: 0
+            height: 0
+            transform: translateY(-50%)
+            border-top: 8px solid transparent
+            border-bottom: 8px solid transparent
+            border-left: 6px solid $tabs-color
+
+.tabs-content
+  > .content
+    padding: 0
+    ul
+      li
+        color: $tabs-color
+
+.tabs-content--height-fix
+  min-height: rem-calc(370)

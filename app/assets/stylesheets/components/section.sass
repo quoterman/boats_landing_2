@@ -1,0 +1,34 @@
+.l-section-triangle-down,
+.l-section-triangle-up
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+.l-section-triangle-down
+  &:after
+    top: 0
+    border: 596px solid transparent
+      top: 596px solid rgba(0,0,0, .5)
+
+.l-section-triangle-up
+  &:after
+    bottom: 0
+    border: 596px solid transparent
+      bottom: 522px solid rgba(0,0,0, .5)
+
+.l-section-border-square
+  &:after
+    content: ''
+    display: block
+    top: 0
+    left: 587px
+    position: absolute
+    border: 4px solid white
+    width: 900px
+    height: 900px
+    transform: rotate(45deg)
+    transform-origin: top
+    z-index: 4

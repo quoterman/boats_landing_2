@@ -1,0 +1,127 @@
+// Variables
+
+$slide-count: 4
+$slide-margin-top: $topbar-height
+
+
+.slides
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    height: 1440px
+    width: 1440px
+
+
+@for $i from 2 through $slide-count
+  .slide-#{$i}
+    margin:
+      top: $slide-margin-top
+
+.slide-title
+  font:
+    size: rem-calc(32)
+    weight: normal
+  line-height: 1
+  text-align: center
+
+  .slide-3 &
+    margin: 
+      bottom: rem-calc(48)
+
+.slide-title--white
+  color: white
+
+
+
+// Slide 1 
+.slide-1
+  
+  .title,
+  .price
+    position: absolute
+    right: 0
+    color: white
+    z-index: 1
+    line-height: 1
+    &:after
+      content: ""
+      position: absolute
+      width: 33px
+      transform: skewX(35deg)
+      top: 0
+      bottom: 0
+
+  .title
+    width: 384px
+    padding: 16px 27px
+    font:
+      size: 32px
+    background:
+      color: black
+    top: 96px
+    &:after
+      left: -22px
+      width: 44px
+      background:
+        color: black
+  
+  .price
+    width: 300px
+    padding: 12px 30px
+    top: 160px
+    font-size: 24px
+    background:
+      color: #AD0015
+    &:after
+      left: -17px
+      background:
+        color: #AD0015
+
+
+// Slide 2
+.slide-2
+  table
+    width: 100%
+    td
+      height: 34px
+      font:
+        family: $font-family-sans-serif-semibold
+        size: 16px
+
+
+
+// Slide 3
+.slide-3
+  background:
+    color: #404040
+
+.slide-3--table
+  display: table
+
+.slide-3__content
+  display: table-cell
+  vertical-align: middle
+  position: relative
+  z-index: 5
+
+// Slide 4
+.slide-4
+  .slide-annotation
+    border-bottom: 2px solid black
+    border-top: 2px solid black
+    text-align: center
+    padding: rem-calc(12) 0
+    font-size: 16px
+    margin:
+      bottom: rem-calc(12)
+  p
+    font:
+      size: rem-calc(15)
+    line-height: 1.4
+
+.slide-4__content
+  min-height: 100%
+  padding:
+    bottom: $footer-height

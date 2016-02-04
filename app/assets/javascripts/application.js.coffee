@@ -29,4 +29,4 @@
 #= require initializer
 
 $ ->
-  $(document).foundation
+  $(document).foundation()
