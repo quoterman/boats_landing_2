@@ -18,6 +18,9 @@ $slide-margin-top: $topbar-height
   .slide-#{$i}
     margin:
       top: $slide-margin-top
+  .slide-#{$i}__content
+    position: relative
+    z-index: 5
 
 .slide-title
   font:
@@ -79,6 +82,7 @@ $slide-margin-top: $topbar-height
       background:
         color: #AD0015
 
+.slide-2__content
 
 // Slide 2
 .slide-2
@@ -103,8 +107,6 @@ $slide-margin-top: $topbar-height
 .slide-3__content
   display: table-cell
   vertical-align: middle
-  position: relative
-  z-index: 5
 
 // Slide 4
 .slide-4

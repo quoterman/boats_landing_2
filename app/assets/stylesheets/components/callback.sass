@@ -1,0 +1,111 @@
+.callback
+  width: 362px
+  height: 362px
+  transform: rotate(45deg)
+  padding: rem-calc(16)
+  &:before
+    content: ''
+    display: block
+    width: 378px
+    height: 378px
+    border: 1px solid $white
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%, -50%, 0)
+
+.callback__close
+  width: 45px
+  height: 45px
+  position: absolute
+  top: -100px
+  left: 50%
+  transform: translateX(-50%)
+  background-color: $white
+  &:before
+    content: ''
+    position: absolute
+    transform: translate3d(-50%,-50%,0) rotate(45deg)
+    top: 50%
+    left: 50%
+    background:
+      image: image-url('svg/close-icon.svg')
+      repeat: no-repeat
+    width: 24px
+    height: 24px
+  &:hover,
+  &:focus
+    &:before
+      background:
+        image: image-url('svg/close-icon-hover.svg')
+
+
+.callback__title
+  font:
+    size: rem-calc(20)
+  color: $black
+  text-align: center
+  margin: 
+    bottom: rem-calc(32)
+
+.callback__content
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate3d(-50%, -50%, 0) rotate(-45deg)
+
+.callback__button
+  padding: 7.5px 27px
+  font-size: 12px
+  text-transform: uppercase
+  position: relative
+  border: none
+  width: 100%
+  &:hover,
+  &:focus
+    background-color: $white
+    color: $black
+    &:after,
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      transform: translateY(-50%) rotate(45deg)
+      width: 4px
+      height: 4px
+      background-color: $black
+    &:before
+      left: 11px
+    &:after
+      right: 11px
+
+.callback__button--topbar
+  color: $black
+  background:
+    color: $white
+  height: auto
+  top: rem-calc(16.2)
+  padding:
+    left: rem-calc(26)
+    right: rem-calc(26)
+
+.callback__button--black
+  background-color: $black
+  color: $white
+  &:hover,
+  &:focus
+    background-color: $black
+    color: $white
+    &:after,
+    &:before
+      background-color: $white
+    &:before
+      left: 11px
+    &:after
+      right: 11px
+
+.callback__form
+  margin: 0
+  input
+    height: rem-calc(32)

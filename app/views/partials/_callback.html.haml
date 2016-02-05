@@ -1,0 +1,15 @@
+#callback.reveal-modal.callback{data: {reveal: ""}}
+  %a.close-reveal-modal.callback__close{aria_label: "Close"}
+  .callback__content
+    .callback__title
+      заказ звонка
+    
+    %form.js-form.callback__form{role:'form', name: 'name'}
+      %label{:for => "name"} Имя:
+      %input#name
+      %label{:for => "phone"} Номер телефона:
+      %input#phone
+      %label{:for => "comments"} Комментарий:
+      %textarea#comments
+      %button.button.callback__button.callback__button--black{type:'submit'}
+        заказать звонок

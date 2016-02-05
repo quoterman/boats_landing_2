@@ -8,6 +8,19 @@ $topbar-link-padding-tb: ($topbar-height - ($topbar-link-line-height * $topbar-l
     background:
       color: black
 
+.title-area
+  padding: 0
+  a.navigation
+    padding: rem-calc(15.5) rem-calc(16)
+    display: block
+    &:hover
+      background:
+        color: transparent
+
+  .top-bar &
+    margin: 
+      right: rem-calc(32)
+
 
 .top-bar-section 
   ul 
@@ -34,3 +47,48 @@ $topbar-link-padding-tb: ($topbar-height - ($topbar-link-line-height * $topbar-l
             &:hover
               &:after
                 width: 100%
+      > a.button
+        position: relative
+        border: none
+        padding:
+          left: rem-calc(26)
+          right: rem-calc(26)
+        color: $black
+        background:
+          color: $white
+        height: auto
+        top: rem-calc(16.2)
+        &:hover,
+        &:focus
+          background-color: $white
+          color: $black
+          &:after,
+          &:before
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            transform: translateY(-50%) rotate(45deg)
+            width: 4px
+            height: 4px
+            background-color: $black
+          &:before
+            left: 11px
+          &:after
+            right: 11px
+
+
+    &.call-center
+      li
+        &:hover
+          > a.button
+            color: $black
+            background:
+              color: $white
+        &.call-center__phone
+          a
+            &:hover,
+            &:focus
+              cursor: default
+              &:after
+                display: none

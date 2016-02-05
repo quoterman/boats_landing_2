@@ -1,9 +1,9 @@
 .contain-to-grid.fixed.show-for-large-up
   %nav.top-bar{data: {topbar: ""}}
-    -# %ul.title-area
-    -#   %li.name
-    -#     %a.navigation{ "data-scroll" => "", href: "#1"}
-    -#       Slider
+    %ul.title-area
+      %li.name
+        %a.navigation{ "data-scroll" => "", href: "#1"}
+          = image_tag 'svg/logo.svg'
     %section.top-bar-section
       %ul.left
         %li
@@ -18,10 +18,10 @@
         %li
           %a.navigation{"data-scroll" => "", href: "#3"}
             О нас
-      %ul.right
-        %li
+      %ul.right.call-center
+        %li.call-center__phone
           %a
             +79874011886
         %li
-          %a
+          %a.button.callback__button.callback__button--topbar{href:'#', data: {reveal_id: "callback"}}
             Заказать звонок
