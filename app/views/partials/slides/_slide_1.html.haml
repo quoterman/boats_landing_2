@@ -1,14 +1,20 @@
-.slide.slide-1
+.slide.slide-1.l-section-triangle-nav.l-section-triangle-nav--large
   .title
     Slider 210 BR
   .price
     629 900 руб.
   .stock_block
-    .fotorama
-      = image_tag 'fotorama/slider175_1.jpg'
-      = image_tag 'fotorama/slider175_2.jpg'
-      = image_tag 'fotorama/slider175_3.jpg'
-      = image_tag 'fotorama/slider175_4.jpg'
+    %ul#cbp-bislideshow.cbp-bislideshow
+      %li
+        = image_tag 'fotorama/slider175_1.jpg'
+      %li
+        = image_tag 'fotorama/slider175_2.jpg'
+      %li
+        = image_tag 'fotorama/slider175_3.jpg'
+      %li
+        = image_tag 'fotorama/slider175_4.jpg'
+    
     -# -if (@text_blocks && @text_blocks[0] && @text_blocks[0].visible)
     -#   .stock
-    -#     = @text_blocks[0].text
+    -#     %p
+    -#       = @text_blocks[0].text

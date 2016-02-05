@@ -18,7 +18,6 @@ class @Widgets.OnePageScroll
       $(".contain-to-grid").removeClass("topbar-scroll")
 
     if index % 2 == 0
-      console.log "123"
       $('.onepage-pagination').addClass('navigation-scroll')
     else
       $('.onepage-pagination').removeClass('navigation-scroll')

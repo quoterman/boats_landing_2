@@ -1,7 +1,7 @@
 // Variables
 
 $slide-count: 4
-$slide-margin-top: $topbar-height
+$slide-padding-top: $topbar-height
 
 
 .slides
@@ -16,8 +16,8 @@ $slide-margin-top: $topbar-height
 
 @for $i from 2 through $slide-count
   .slide-#{$i}
-    margin:
-      top: $slide-margin-top
+    padding:
+      top: $slide-padding-top
   .slide-#{$i}__content
     position: relative
     z-index: 5
@@ -29,19 +29,19 @@ $slide-margin-top: $topbar-height
   line-height: 1
   text-align: center
 
-  .slide-3 &
-    margin: 
-      bottom: rem-calc(48)
-
 .slide-title--white
   color: white
 
+.slide-title--margin-bottom
+  margin: 
+    bottom: rem-calc(48)
 
 
 // Slide 1 
 .slide-1
   
   .title,
+  .stock,
   .price
     position: absolute
     right: 0
@@ -51,9 +51,6 @@ $slide-margin-top: $topbar-height
     &:after
       content: ""
       position: absolute
-      width: 33px
-      transform: skewX(35deg)
-      top: 0
       bottom: 0
 
   .title
@@ -65,6 +62,8 @@ $slide-margin-top: $topbar-height
       color: black
     top: 96px
     &:after
+      transform: skewX(35deg)
+      top: 0
       left: -22px
       width: 44px
       background:
@@ -78,32 +77,43 @@ $slide-margin-top: $topbar-height
     background:
       color: #AD0015
     &:after
+      transform: skewX(35deg)
+      top: 0
+      width: 33px
       left: -17px
       background:
         color: #AD0015
 
-.slide-2__content
-
-// Slide 2
-.slide-2
-  table
-    width: 100%
-    td
-      height: 34px
+  .stock
+    bottom: rem-calc(48)
+    padding: 24px 100px
+    background:
+      color: rgba(0,0,0,.8)
+    p
+      margin: 0
+      line-height: 1
       font:
-        family: $font-family-sans-serif-semibold
-        size: 16px
-
-
+        size: rem-calc(20)
+        family: $font-family-sans-serif
+    &:after
+      border: 34px solid transparent
+        right: 34px solid rgba(0,0,0,.8)
+        bottom: 34px solid rgba(0,0,0,.8)
+      left: -68px
 
 // Slide 3
 .slide-3
   background:
     color: #404040
 
+.slide-2--table
+  margin: 0
+
+.slide-2--table,
 .slide-3--table
   display: table
 
+.slide-2__content,
 .slide-3__content
   display: table-cell
   vertical-align: middle

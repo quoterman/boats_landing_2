@@ -10,25 +10,52 @@
 .l-section-triangle-down
   &:after
     top: 0
-    border: 596px solid transparent
-      top: 596px solid #fcfcfc
+    border: 655px solid transparent
+      top: 655px solid #fcfcfc
 
 .l-section-triangle-up
   &:after
     bottom: 0
-    border: 596px solid transparent
-      bottom: 522px solid #fcfcfc
+    border: 800px solid transparent
+      bottom: 800px solid #fcfcfc
 
 .l-section-border-square
   &:after
     content: ''
     display: block
-    top: 0
-    left: 587px
+    top: -100px
+    left: 50%
     position: absolute
     border: 4px solid white
-    width: 900px
-    height: 900px
-    transform: rotate(45deg)
-    transform-origin: top
+    width: 950px
+    height: 950px
+    transform: translateX(-50%) rotate(45deg)
     z-index: 4
+
+.l-section-triangle-nav
+  &:before
+    content: ''
+    display: block
+    border: $footer-triangle-size solid transparent
+      bottom: $footer-triangle-size solid #404040
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    background:
+      image: image-url('svg/arrows-down.svg')
+      repeat: no-repeat
+    z-index: 5
+
+.l-section-triangle-nav--large
+  &:before
+    border-width: rem-calc(100)
+    border-bottom-width: rem-calc(100)
+    border-bottom-color: $black
+
+
+.l-section-triangle-nav--footer
+  &:before
+    bottom: $footer-height
+    border:
+      bottom-color: $black

@@ -1,6 +1,8 @@
 #= require jquery
 #= require jquery_ujs
-#= require fotorama
+#= require jquery.imagesloaded.min
+#= require cbpBGSlideshow
+# require fotorama
 #= require onepage-scroll
 
 
@@ -30,3 +32,5 @@
 
 $ ->
   $(document).foundation()
+
+  cbpBGSlideshow.init()

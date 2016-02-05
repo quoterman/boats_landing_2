@@ -1,5 +1,5 @@
 $ ->
-  $(document).foundation
+  $(document).foundation()
 
   $('.slides').each (index, container) ->
     new Widgets.OnePageScroll container
