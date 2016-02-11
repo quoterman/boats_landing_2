@@ -8,6 +8,13 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 
+deploy_host = 'ftp58.hostland.ru'
+deploy_auth = 'deploy@' + deploy_host
+
+role :app, deploy_auth
+role :web, deploy_auth
+role :db,  deploy_auth
+set :rails_env, 'production'
 
 # role-based syntax
 # ==================
@@ -41,11 +48,11 @@
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+set :ssh_options, {
+  #    keys: %w(/home/rlisowski/.ssh/id_rsa),
+   forward_agent: false,
+  #    auth_methods: %w(password)
+}
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
