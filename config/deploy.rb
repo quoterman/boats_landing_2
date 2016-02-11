@@ -11,7 +11,7 @@ set :repo_url, 'git@github.com:Tereshin/boats_landing.git'
 # set :deploy_to, '/var/www/my_app_name'
 
 # Default value for :scm is :git
-# set :scm, :git
+set :scm, :git
 
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -27,6 +27,7 @@ set :repo_url, 'git@github.com:Tereshin/boats_landing.git'
 
 # Default value for linked_dirs is []
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
