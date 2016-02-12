@@ -190,6 +190,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  net-ssh
   rails (= 4.2.1)
   rails-assets-fotorama!
   rails-assets-onepage-scroll!
