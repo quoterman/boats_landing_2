@@ -8,7 +8,7 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 
-deploy_host = 'ftp58.hostland.ru'
+deploy_host = 'serv58.hostland.ru'
 deploy_auth = 'deploy@' + deploy_host
 
 role :app, deploy_auth
