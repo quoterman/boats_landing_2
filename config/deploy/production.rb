@@ -8,7 +8,7 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 
-deploy_host = 'serv58.hostland.ru:1024'
+deploy_host = '185.26.120.70'
 deploy_auth = 'deploy@' + deploy_host
 
 role :app, deploy_auth
@@ -50,7 +50,7 @@ set :rails_env, 'production'
 # --------------
 set :ssh_options, {
   #    keys: %w(/home/rlisowski/.ssh/id_rsa),
-   forward_agent: false,
+   forward_agent: true,
   #    auth_methods: %w(password)
 }
 #
