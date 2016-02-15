@@ -5,10 +5,10 @@ listen "0.0.0.0:80", :tcp_nopush => true
 
 timeout 60
 
-pid "/var/www/boats_landing/tmp/pids/unicorn.pid"
+pid "/var/www/boats_landing/current/tmp/pids/unicorn.pid"
 
-stderr_path "/var/www/boats_landing/logs/unicorn.stderr.log"
-stdout_path "/var/www/boats_landing/logs/unicorn.stdout.log"
+stderr_path "/var/www/boats_landing/current/log/unicorn.stderr.log"
+stdout_path "/var/www/boats_landing/current/log/unicorn.stdout.log"
 
 preload_app true
 GC.respond_to?(:copy_on_write_friendly=) and
