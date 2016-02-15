@@ -42,11 +42,13 @@ end
 # gem 'capistrano-rails', group: :development
 
 gem 'net-ssh'
+gem 'unicorn'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
