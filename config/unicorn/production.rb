@@ -1,7 +1,7 @@
 worker_processes 3
 working_directory "/var/www/boats_landing/current" # available in 0.94.0+
 
-listen "0.0.0.0:80", :tcp_nopush => true
+listen "0.0.0.0:8080", :tcp_nopush => true
 
 timeout 60
 
