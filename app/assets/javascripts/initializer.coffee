@@ -9,3 +9,6 @@ $ ->
 
   $(".callback-modal").each (index, container) ->
     new Widgets.Callback container
+
+  $('.navigation').on 'click', ->
+    $('.slides').moveTo(this.getAttribute('data-scroll'));
