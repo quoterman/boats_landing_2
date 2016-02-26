@@ -2,7 +2,8 @@
 lock '3.4.0'
 
 set :application, 'boats_landing'
-set :repo_url, 'git@github.com:Tereshin/boats_landing.git'
+#set :repo_url, 'git@github.com:Tereshin/boats_landing.git'
+set :repo_url, 'git@github.com:quoterman/boats_landing_2.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
